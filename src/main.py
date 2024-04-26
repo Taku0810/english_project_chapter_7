@@ -4,7 +4,7 @@ import torch.nn as nn  # PyTorchのニューラルネットワークモジュー
 import torch.optim as optim  # PyTorchの最適化モジュール
 
 # データセットをロードし、入力（X）と出力（y）に分割
-dataset = np.loadtxt('C:\\Users\\加古匠\\PycharmProjects\\pythonProject1\\datasets\\pima-indians-diabetes_2.csv', delimiter=',')  # CSVからデータを読み込む
+dataset = np.loadtxt('C:\\Users\\astronaut1010\\PycharmProjects\\djangoTutorial\\english_project_chapter_7\\datasets\\pima-indians-diabetes_2.csv', delimiter=',')  # CSVからデータを読み込む
 
 X = dataset[:, 0:8]  # 入力特徴量（最初の8列）
 y = dataset[:, 8]  # 出力ラベル（最後の1列）
@@ -24,7 +24,7 @@ model = nn.Sequential(  # 順次層のシーケンスとして定義
 )
 print(model)  # モデルの構造を表示
 
-# モデルのトレーニング
+# 損失関数と最適化手法の定義
 loss_fn = nn.BCELoss()  # バイナリ交差エントロピー損失関数
 optimizer = optim.Adam(model.parameters(), lr=0.001)  # Adam最適化手法と学習率0.001
 
